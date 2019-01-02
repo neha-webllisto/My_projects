@@ -5,3 +5,5 @@ class Employee_form(forms.Form):
 	ename = forms.CharField(max_length=20)
 	eemail = forms.EmailField()
 	econtact = forms.CharField(max_length=12)
+
+	# This is Form page
