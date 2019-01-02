@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<form method="POST",action="Home/update/">
+	{% csrf_token %}
+
+	<center>
+		<h1>Update your details...</h1></br></br>
+
+		<!-- <label>Employee id : </label>{{x.eid}}</br></br>
+		<label>Employee name : </label>{{x.ename}}</br></br>
+		<label>Employee email id : </label>{{x.eemail}}</br></br>
+		<label>Employee contact : </label>{{x.econtact}}</br></br> -->
+
+		{{form}}
+
+
+
+		<button type="submit"  class="btn btn-primary" >Submit</button>
+
+	</center>
+
+</form>
+
+</body>
+</html>

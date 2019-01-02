@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee details</title>
+</head>
+<body>
+
+<center>
+        <h1>Details of the Employee...</h1><br><br>
+	<table border="2" cellpadding="10" cellspacing="10" width="50%">
+		<tr>
+			<th>Employee Id</th>
+			<th>Employee Name</th>
+			<th>Employee Email id</th>
+			<th>Employee Contact</th>
+			<th>Actions</th>
+		</tr>
+
+        {% for x in p%}
+        <tr>
+        	<td>{{x.eid}}</td>
+        	<td>{{x.ename}}</td>
+        	<td>{{x.eemail}}</td>
+        	<td>{{x.econtact}}</td>
+        	<td>
+        		<a href="{% url 'update' x.id %}">Edit</a>
+                <a href="{% url 'delete' x.id %}">Delete</a>
+        	</td>
+        </tr>
+        {% endfor %}
+	</table><br><br>
+
+	<a href="{% url 'New_entry' %}" class="btn btn-primary">Add a new record</a>
+</center>
+</body>
+</html>
